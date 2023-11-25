@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery System - Customer Interface</title>
+  <link rel="stylesheet" href="customer-interface.css">
+</head>
+<body>
+
+  <header>
+    <h1>Food Delivery System - Customer Interface</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showRestaurantList()">Order</a></li>
+        <li><a href="#" onclick="showChooseItems()">Choose Items</a></li>
+        <li><a href="#real-time-tracking">Track Order</a></li>
+        <li><a href="#feedback-ratings">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Restaurant List -->
+    <section id="restaurant-list">
+      <h2>Choose a Restaurant</h2>
+      <div class="restaurant-list">
+        <div class="restaurant-item" onclick="showChooseItems()">
+          <img src="kfc.jpg" alt="KFC">
+        </div>
+        <div class="restaurant-item" onclick="showChooseItems()">
+          <img src="domino-s-pizza-rock-cottage.jpg" alt="Domino's">
+        </div>
+        <!-- Add more restaurants as needed -->
+      </div>
+    </section>
+
+    <!-- Choose Items -->
+    <!-- Choose Items -->
+<section id="choose-items">
+  <h2>Choose Your Items</h2>
+  <div class="panel">
+    <label>Select Menu Items:</label>
+    <div class="menu-items">
+      <label>
+        <input type="checkbox" name="item1" value="item1">
+        <img src="fc.jpg" alt="KFC Fried Chicken">
+      </label>
+
+      <label>
+        <input type="checkbox" name="item2" value="item2">
+        <img src="piz.jpg" alt="Chicken Pepporoni Pizza">
+      </label>
+
+      <!-- Add more items as needed -->
+    </div>
+
+    <label for="customization">Customization:</label>
+    <textarea id="customization" name="customization" placeholder="Add special instructions..."></textarea>
+
+    <button type="button" onclick="showSpecialInstructions()">Next</button>
+  </div>
+</section>
+
+    <!-- Other sections remain the same -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Food Delivery System. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showRestaurantList() {
+      document.getElementById("restaurant-list").style.display = "block";
+      document.getElementById("choose-items").style.display = "none";
+      document.getElementById("special-instructions").style.display = "none";
+    }
+
+    function showChooseItems() {
+      document.getElementById("restaurant-list").style.display = "none";
+      document.getElementById("choose-items").style.display = "block";
+      document.getElementById("special-instructions").style.display = "none";
+    }
+
+    function showSpecialInstructions() {
+      document.getElementById("restaurant-list").style.display = "none";
+      document.getElementById("choose-items").style.display = "none";
+      document.getElementById("special-instructions").style.display = "block";
+    }
+
+    function redirectToTrackAndFeedback() {
+      // Add logic to redirect to the track and feedback page
+      window.location.href = "#real-time-tracking";
+    }
+
+    function showDefaultPage() {
+    document.getElementById("restaurant-list").style.display = "block";
+    document.getElementById("choose-items").style.display = "none";
+    document.getElementById("special-instructions").style.display = "none";
+  }
+
+  // Call the function when the page loads
+  window.onload = showDefaultPage;
+  </script>
+</body>
+</html>
