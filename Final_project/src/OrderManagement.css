@@ -1,0 +1,18 @@
+/* OrderManagement.css */
+.order-management {
+  text-align: center;
+  margin: 20px;
+}
+
+.order-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.order {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
