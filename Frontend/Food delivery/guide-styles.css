@@ -1,0 +1,67 @@
+/* guide-styles.css */
+
+/* Add general styles for the guide page here */
+
+#getting-started,
+#features-overview,
+#tips-and-tricks {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#getting-started:hover,
+#features-overview:hover,
+#tips-and-tricks:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #e44d26;
+  font-size: 2em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Add specific styles for getting started, features overview, and tips and tricks sections */
+
+/* Additional aesthetic features */
+#getting-started,
+#features-overview,
+#tips-and-tricks {
+  position: relative;
+  overflow: hidden;
+}
+
+#getting-started::after,
+#features-overview::after,
+#tips-and-tricks::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#getting-started:hover::after,
+#features-overview:hover::after,
+#tips-and-tricks:hover::after {
+  opacity: 1;
+}

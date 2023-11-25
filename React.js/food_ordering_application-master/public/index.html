@@ -1,0 +1,38 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Order Management</title>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  <!-- public/index.html -->
+
+<li>
+  <a href="/order-management" id="orderManagementLink">Order Management</a>
+</li>
+
+  <div id="root"></div>
+  <script src="bundle.js"></script>
+  <script src="/static/js/main.<hash>.js"></script>
+  <!-- public/index.html -->
+
+<script>
+  document.getElementById('orderManagementLink').addEventListener('click', function (event) {
+    event.preventDefault();
+    ReactDOM.render(
+      <React.StrictMode>
+        <OrderManagement />
+      </React.StrictMode>,
+      document.getElementById('root')
+    );
+  });
+</script>
+
+</body>
+</html>
+

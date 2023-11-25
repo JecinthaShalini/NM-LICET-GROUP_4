@@ -1,0 +1,37 @@
+/* delivery-styles.css */
+
+/* Add general styles for the delivery interface here */
+
+#order-assignment,
+#status-updates {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#order-assignment:hover,
+#status-updates:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #e44d26;
+  font-size: 2em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Add specific styles for order assignment and status updates sections */
